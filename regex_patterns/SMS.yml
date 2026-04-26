@@ -1,0 +1,7 @@
+name: SMS
+pattern: ^(SMS)$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

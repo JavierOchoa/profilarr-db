@@ -1,0 +1,7 @@
+name: SMS (Release Title)
+pattern: (?:^|[ ._\-])SMS$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

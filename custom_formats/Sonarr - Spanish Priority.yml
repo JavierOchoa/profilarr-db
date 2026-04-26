@@ -32,4 +32,24 @@ conditions:
   required: false
   type: release_title
   pattern: LatTeam (Release Title)
+- name: Sonarr - SyncTeam
+  negate: false
+  required: false
+  type: release_group
+  pattern: SyncTeam
+- name: Sonarr - SyncTeam (Release Title)
+  negate: false
+  required: false
+  type: release_title
+  pattern: SyncTeam (Release Title)
+- name: Sonarr - SMS
+  negate: false
+  required: false
+  type: release_group
+  pattern: SMS
+- name: Sonarr - SMS (Release Title)
+  negate: false
+  required: false
+  type: release_title
+  pattern: SMS (Release Title)
 tests: []

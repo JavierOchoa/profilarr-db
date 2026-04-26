@@ -1,0 +1,7 @@
+name: SyncTeam
+pattern: ^(SyncTeam)$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

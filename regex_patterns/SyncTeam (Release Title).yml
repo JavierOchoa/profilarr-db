@@ -1,0 +1,7 @@
+name: SyncTeam (Release Title)
+pattern: (?:^|[ ._\-])SyncTeam$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

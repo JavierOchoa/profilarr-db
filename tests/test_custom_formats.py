@@ -106,6 +106,10 @@ def test_spanish_priority_custom_formats_promote_known_spanish_sources():
         "BEN THE MEN": "release_title",
         "LatTeam": "release_group",
         "LatTeam (Release Title)": "release_title",
+        "SyncTeam": "release_group",
+        "SyncTeam (Release Title)": "release_title",
+        "SMS": "release_group",
+        "SMS (Release Title)": "release_title",
     }
 
     for service in ["Radarr", "Sonarr"]:
