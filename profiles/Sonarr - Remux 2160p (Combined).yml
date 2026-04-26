@@ -1,6 +1,7 @@
-name: Sonarr - WEB-2160p (Combined)
+name: Sonarr - Remux 2160p (Combined)
 description: "[Profile from TRaSH-Guides.](https://trash-guides.info/Sonarr/sonarr-setup-quality-profiles)\n\
-  \nQuality Profile that covers:  \n- WEBDL: 1080p, 2160p"
+  \nQuality Profile that covers:  \n- WEBDL: 1080p, 2160p  \n- Bluray: 1080p, 2160p\
+  \  \n- Remux: 1080p, 2160p"
 tags:
 - Sonarr
 upgradesAllowed: true
@@ -39,6 +40,10 @@ custom_formats:
 - name: Sonarr - LQ (Release Title)
   score: -10000
 qualities:
+- id: 3
+  name: Remux-2160p
+- id: 4
+  name: Bluray-2160p
 - id: -1
   name: WEB 2160p
   description: ''
@@ -47,6 +52,10 @@ qualities:
     name: WEBRip-2160p
   - id: 5
     name: WEBDL-2160p
+- id: 8
+  name: Remux-1080p
+- id: 10
+  name: Bluray-1080p
 - id: -2
   name: WEB 1080p
   description: ''
@@ -56,6 +65,6 @@ qualities:
   - id: 9
     name: WEBDL-1080p
 upgrade_until:
-  id: -1
-  name: WEB 2160p
+  id: 3
+  name: Remux-2160p
 language: any

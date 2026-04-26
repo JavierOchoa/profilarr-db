@@ -114,3 +114,24 @@ def test_all_profiles_score_spanish_priority_above_top_trash_tier():
         }
 
         assert scores[expected_name] == 2000
+
+
+def test_sonarr_remux_2160p_combined_uses_remux_bluray_web_ladder():
+    """Sonarr Remux 2160p Combined should allow remux, bluray, and web ladders."""
+    profile_file = PROFILES_DIR / "Sonarr - Remux 2160p (Combined).yml"
+    assert profile_file.exists()
+    assert not (PROFILES_DIR / "Sonarr - WEB-2160p (Combined).yml").exists()
+
+    with open(profile_file, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    assert data["name"] == "Sonarr - Remux 2160p (Combined)"
+    assert data["upgrade_until"] == {"id": 3, "name": "Remux-2160p"}
+    assert [quality["name"] for quality in data["qualities"]] == [
+        "Remux-2160p",
+        "Bluray-2160p",
+        "WEB 2160p",
+        "Remux-1080p",
+        "Bluray-1080p",
+        "WEB 1080p",
+    ]
