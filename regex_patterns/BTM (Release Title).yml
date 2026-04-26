@@ -1,0 +1,7 @@
+name: BTM (Release Title)
+pattern: (?:^|[ ._\-])BTM$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

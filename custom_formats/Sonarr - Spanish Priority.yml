@@ -12,6 +12,11 @@ conditions:
   required: false
   type: release_group
   pattern: BTM
+- name: Sonarr - BTM (Release Title)
+  negate: false
+  required: false
+  type: release_title
+  pattern: BTM (Release Title)
 - name: Sonarr - BEN THE MEN
   negate: false
   required: false
@@ -22,4 +27,9 @@ conditions:
   required: false
   type: release_group
   pattern: LatTeam
+- name: Sonarr - LatTeam (Release Title)
+  negate: false
+  required: false
+  type: release_title
+  pattern: LatTeam (Release Title)
 tests: []

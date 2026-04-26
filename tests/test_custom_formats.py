@@ -102,8 +102,10 @@ def test_spanish_priority_custom_formats_promote_known_spanish_sources():
     """Spanish Priority should include known Spanish-friendly sources in one CF."""
     expected_conditions = {
         "BTM": "release_group",
+        "BTM (Release Title)": "release_title",
         "BEN THE MEN": "release_title",
         "LatTeam": "release_group",
+        "LatTeam (Release Title)": "release_title",
     }
 
     for service in ["Radarr", "Sonarr"]:

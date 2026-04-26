@@ -1,0 +1,7 @@
+name: LatTeam (Release Title)
+pattern: (?:^|[ ._\-])LatTeam$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []
