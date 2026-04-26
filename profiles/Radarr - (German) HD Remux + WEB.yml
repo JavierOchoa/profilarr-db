@@ -20,6 +20,8 @@ custom_formats:
   score: 3900
 - name: Radarr - German Web Tier 01
   score: 2100
+- name: Radarr - Spanish Priority
+  score: 2000
 - name: Radarr - Remux Tier 01
   score: 1950
 - name: Radarr - German Web Tier 02

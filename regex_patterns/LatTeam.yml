@@ -1,0 +1,7 @@
+name: LatTeam
+pattern: ^(LatTeam)$
+description: ''
+tags:
+- Radarr
+- Sonarr
+tests: []

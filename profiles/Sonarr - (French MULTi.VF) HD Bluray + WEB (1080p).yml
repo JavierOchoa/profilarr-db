@@ -9,6 +9,8 @@ minCustomFormatScore: 0
 upgradeUntilScore: 10000
 minScoreIncrement: 1
 custom_formats:
+- name: Sonarr - Spanish Priority
+  score: 2000
 - name: Sonarr - FR HD Bluray Tier 01
   score: 1800
 - name: Sonarr - FR WEB Tier 01

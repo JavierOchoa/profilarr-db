@@ -9,6 +9,8 @@ minCustomFormatScore: 0
 upgradeUntilScore: 10000
 minScoreIncrement: 1
 custom_formats:
+- name: Sonarr - Spanish Priority
+  score: 2000
 - name: Sonarr - WEB Tier 01
   score: 1700
 - name: Sonarr - WEB Tier 02

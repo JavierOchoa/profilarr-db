@@ -23,6 +23,8 @@ custom_formats:
   score: 2300
 - name: Radarr - German Web Tier 01
   score: 2100
+- name: Radarr - Spanish Priority
+  score: 2000
 - name: Radarr - German Web Tier 02
   score: 1900
 - name: Radarr - German Web Tier 03

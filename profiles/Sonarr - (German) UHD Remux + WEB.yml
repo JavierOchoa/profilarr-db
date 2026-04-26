@@ -22,6 +22,8 @@ custom_formats:
   score: 3900
 - name: Sonarr - German Web Tier 01
   score: 2100
+- name: Sonarr - Spanish Priority
+  score: 2000
 - name: Sonarr - German Web Tier 02
   score: 1900
 - name: Sonarr - German Web Tier 03

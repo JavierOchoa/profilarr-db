@@ -96,3 +96,45 @@ def test_custom_formats_directory_exists():
 def test_regex_patterns_directory_exists():
     """Test that the regex_patterns directory exists."""
     assert REGEX_PATTERNS_DIR.exists(), f"Regex patterns directory not found: {REGEX_PATTERNS_DIR}"
+
+
+def test_spanish_priority_custom_formats_promote_known_spanish_sources():
+    """Spanish Priority should include known Spanish-friendly sources in one CF."""
+    expected_conditions = {
+        "BTM": "release_group",
+        "BEN THE MEN": "release_title",
+        "LatTeam": "release_group",
+    }
+
+    for service in ["Radarr", "Sonarr"]:
+        custom_format_file = CUSTOM_FORMATS_DIR / f"{service} - Spanish Priority.yml"
+        assert custom_format_file.exists()
+
+        with open(custom_format_file, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+
+        assert data["name"] == f"{service} - Spanish Priority"
+        conditions = {condition["pattern"]: condition for condition in data["conditions"]}
+
+        for pattern, condition_type in expected_conditions.items():
+            assert conditions[pattern]["type"] == condition_type
+            assert conditions[pattern]["required"] is False
+            assert conditions[pattern]["negate"] is False
+
+
+def test_spanish_priority_sources_are_not_lq_penalized():
+    """Sources moved to Spanish Priority should no longer trigger LQ penalties."""
+    for service in ["Radarr", "Sonarr"]:
+        lq_file = CUSTOM_FORMATS_DIR / f"{service} - LQ.yml"
+        lq_title_file = CUSTOM_FORMATS_DIR / f"{service} - LQ (Release Title).yml"
+
+        with open(lq_file, encoding="utf-8") as f:
+            lq_data = yaml.safe_load(f)
+        with open(lq_title_file, encoding="utf-8") as f:
+            lq_title_data = yaml.safe_load(f)
+
+        assert all(condition["pattern"] != "BTM" for condition in lq_data["conditions"])
+        assert all(
+            condition["pattern"] != "BEN THE MEN"
+            for condition in lq_title_data["conditions"]
+        )

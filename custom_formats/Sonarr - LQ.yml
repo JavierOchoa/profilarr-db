@@ -9,11 +9,6 @@ conditions:
   required: false
   type: release_group
   pattern: Sonarr - BRiNK
-- name: Sonarr - BTM
-  negate: false
-  required: false
-  type: release_group
-  pattern: BTM
 - name: Sonarr - CHX
   negate: false
   required: false

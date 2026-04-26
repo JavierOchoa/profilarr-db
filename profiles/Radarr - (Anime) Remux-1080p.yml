@@ -9,6 +9,8 @@ minCustomFormatScore: 100
 upgradeUntilScore: 10000
 minScoreIncrement: 1
 custom_formats:
+- name: Radarr - Spanish Priority
+  score: 2000
 - name: Radarr - Anime BD Tier 01
   score: 1400
 - name: Radarr - Anime BD Tier 02

@@ -4,11 +4,6 @@ tags:
 - Sonarr
 - Release Title
 conditions:
-- name: Sonarr - BEN THE MEN
-  negate: false
-  required: false
-  type: release_title
-  pattern: BEN THE MEN
 - name: Sonarr - BiTOR (2160p)
   negate: false
   required: false

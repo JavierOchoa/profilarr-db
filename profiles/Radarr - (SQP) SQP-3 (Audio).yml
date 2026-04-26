@@ -32,6 +32,8 @@ custom_formats:
   score: 2250
 - name: Radarr - DTS-HD HRA
   score: 2000
+- name: Radarr - Spanish Priority
+  score: 2000
 - name: Radarr - Remux Tier 01
   score: 1950
 - name: Radarr - Remux Tier 02

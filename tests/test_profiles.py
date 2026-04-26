@@ -98,3 +98,19 @@ def test_profiles_directory_exists():
 def test_custom_formats_directory_exists():
     """Test that the custom_formats directory exists."""
     assert CUSTOM_FORMATS_DIR.exists(), f"Custom formats directory not found: {CUSTOM_FORMATS_DIR}"
+
+
+def test_all_profiles_score_spanish_priority_above_top_trash_tier():
+    """Every profile should give Spanish Priority a small edge over 1950 tiers."""
+    for profile_file in get_all_profiles():
+        with open(profile_file, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+
+        service = data["tags"][0]
+        expected_name = f"{service} - Spanish Priority"
+        scores = {
+            custom_format["name"]: custom_format["score"]
+            for custom_format in data["custom_formats"]
+        }
+
+        assert scores[expected_name] == 2000

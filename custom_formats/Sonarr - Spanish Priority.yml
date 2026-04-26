@@ -1,0 +1,25 @@
+name: Sonarr - Spanish Priority
+description: Custom priority for sources Javier trusts to include Spanish audio or
+  Spanish-friendly releases.
+tags:
+- Sonarr
+- Language
+- Release Group
+- Release Title
+conditions:
+- name: Sonarr - BTM
+  negate: false
+  required: false
+  type: release_group
+  pattern: BTM
+- name: Sonarr - BEN THE MEN
+  negate: false
+  required: false
+  type: release_title
+  pattern: BEN THE MEN
+- name: Sonarr - LatTeam
+  negate: false
+  required: false
+  type: release_group
+  pattern: LatTeam
+tests: []

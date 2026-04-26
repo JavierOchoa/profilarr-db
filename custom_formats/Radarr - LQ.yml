@@ -59,11 +59,6 @@ conditions:
   required: false
   type: release_group
   pattern: Radarr - beAst
-- name: Radarr - BTM
-  negate: false
-  required: false
-  type: release_group
-  pattern: BTM
 - name: Radarr - C1NEM4
   negate: false
   required: false
